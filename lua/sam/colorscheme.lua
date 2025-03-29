@@ -7,20 +7,20 @@
 -- }
 
 -- KANAGAWA --
-local M = {
-  "rebelot/kanagawa.nvim",
-  lazy = false,
-  priority = 1000,
-  opts = {},
-}
-
--- GRUVBOX --
 -- local M = {
---   "ellisonleao/gruvbox.nvim",
+--   "rebelot/kanagawa.nvim",
 --   lazy = false,
 --   priority = 1000,
---   opts = {}
+--   opts = {},
 -- }
+
+-- GRUVBOX --
+local M = {
+  "ellisonleao/gruvbox.nvim",
+  lazy = false,
+  priority = 1000,
+  opts = {}
+}
 
 -- NO CLOWN FIESTA --
 -- local M = {
@@ -38,7 +38,7 @@ local M = {
 
 function M.config()
   -- vim.cmd.colorscheme "solarized-osaka"
-  -- vim.cmd.colorscheme "gruvbox"
+  vim.cmd.colorscheme "gruvbox"
   -- require("oxocarbon").setup({
   --   transparent=true
   -- })
@@ -47,7 +47,7 @@ function M.config()
   --   transparent = true,
   -- })
   -- vim.cmd.colorscheme("oxocarbon")
-  vim.cmd.colorscheme("kanagawa-dragon")
+  -- vim.cmd.colorscheme("kanagawa-dragon")
 end
 
 return M

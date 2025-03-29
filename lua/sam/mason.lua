@@ -5,7 +5,6 @@ local M = {
   },
 }
 
-
 function M.config()
   local servers = {
     "lua_ls",
@@ -13,28 +12,28 @@ function M.config()
     "html",
     "eslint",
     "tailwindcss",
-    "tsserver",
+    "ts_ls",
     "pyright",
     "ruff",
+    "taplo",
     "bashls",
     "jsonls",
     "jdtls",
     "yamlls",
     "clangd",
-    "denols"
+    "denols",
+    "gopls",
   }
 
-  require("mason").setup {
+  require("mason").setup({
     ui = {
       border = "rounded",
     },
-  }
+  })
 
-  require("mason-lspconfig").setup {
+  require("mason-lspconfig").setup({
     ensure_installed = servers,
-  }
-
+  })
 end
 
 return M
-

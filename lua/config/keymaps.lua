@@ -4,7 +4,6 @@ local opts = { noremap = true, silent = true }
 vim.g.mapleader = " " -- Set the leader key to space
 
 -- General mappings
-map("i", "jj", "<ESC>", opts)                                             -- Exit insert mode with 'jj'
 map("n", "<C-s>", ":w<CR>", { noremap = true })                           -- Save file in normal mode
 map("i", "<C-s>", "<C-o>:write<CR>a", { noremap = true })                 -- Save file in insert mode
 map("n", "<leader>nh", ":nohl<CR>", { desc = "clear search highlights" }) -- Clear search highlights
@@ -17,10 +16,8 @@ map("v", "<space>x", ":.lua <CR>")
 
 -- Navigation
 -- Map Ctrl+hjkl to arrow keys in insert mode
-vim.api.nvim_set_keymap("i", "<C-h>", "<Left>", opts)
-vim.api.nvim_set_keymap("i", "<C-j>", "<Down>", opts)
-vim.api.nvim_set_keymap("i", "<C-k>", "<Up>", opts)
-vim.api.nvim_set_keymap("i", "<C-l>", "<Right>", opts)
+map("i", "<C-h>", "<Left>", opts)
+map("i", "<C-l>", "<Right>", opts)
 map("n", "<C-h>", "<C-w>h", opts)
 map("n", "<C-j>", "<C-w>j", opts)
 map("n", "<C-k>", "<C-w>k", opts)
